@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/jsdnlb/reminiscence#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^3.4.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.0.0",
+    "firebase-admin": "^9.0.0",
     "jquery": "^3.5.1"
   },
   "devDependencies": {
