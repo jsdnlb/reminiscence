@@ -35,18 +35,29 @@ app.get("/about", function (req, res) {
   });
 });
 
+app.get("/listUsers", function (req, res) {
+  let allUsers;
+  db.ref("users").on("value", function (snapshot) {
+    allUsers = snapshot.val();
+    // console.log("allUsers", allUsers);
+    res.render("listUsers", {
+      title: "Lista de usuarios",
+      description: "Somos expertos en aprender",
+      list: allUsers,
+    });
+  });
+});
+
 app.post("/save", function (req, res) {
-  /*   var newUser = {
+  var newUser = {
     firstName: req.body.firstName,
-    lastName = req.body.lastName,
-    email = req.body.email,
+    lastName: req.body.lastName,
+    email: req.body.email,
   };
   db.ref("users").push(newUser);
- */
-  console.log(req.body);
   res.render("home", {
-    title: "Acerca de",
-    description: "Somos expertos en aprender",
+    title: "Usuario: " + req.body.firstName + " " + req.body.lastName,
+    description: "Se ha guardado correctamente el usuario",
   });
 });
 

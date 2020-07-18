@@ -8,10 +8,15 @@
 
 <form action="/save" method="post">
     <div class="form-group">
-        <label for="inputName">Nombre</label>
-        <input type="name" class="form-control" id="inputName" aria-describedby="nameHelp"
-            placeholder="Ingrese su nombre">
-        <small id=" nameHelp" class="form-text text-muted">Ingrese su nombre por favor.</small>
+        <label>Nombre</label>
+        <input type="text" class="form-control" name="firstName" placeholder="Ingrese su nombre">
+        <small id=" nameHelp" class="form-text text-muted">Ingrese su nombre por favor.</small> <br>
+        <label>Apellido</label>
+        <input type="text" class="form-control" name="lastName" placeholder="Ingrese su apellido">
+        <small id=" nameHelp" class="form-text text-muted">Ingrese su apellido por favor.</small>
+        <label>Correo electrónico</label>
+        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico">
+        <small id=" nameHelp" class="form-text text-muted">Ingrese su correo electrónico por favor.</small>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
