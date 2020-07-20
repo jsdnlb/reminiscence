@@ -1,3 +1,28 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
 <script>
-    console.log("Hola")
+
+    async function login() {
+        const { value: email } = await Swal.fire({
+            title: 'Input email address',
+            input: 'email',
+            inputPlaceholder: 'Enter your email address',
+            allowOutsideClick: false
+        })
+        const { value: pass } = await Swal.fire({
+            title: 'Enter your password',
+            input: 'password',
+            inputPlaceholder: 'Enter your password',
+            inputAttributes: {
+                maxlength: 10,
+                autocapitalize: 'off',
+                autocorrect: 'off'
+            },
+            allowOutsideClick: false
+        })
+
+        if (email && pass) {
+            Swal.fire(`Entered email: ${email} - Password: ${pass}`)
+        }
+    }
 </script>

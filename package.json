@@ -22,7 +22,8 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.0.0",
     "firebase-admin": "^9.0.0",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "sweetalert2": "^9.17.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
