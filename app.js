@@ -28,6 +28,14 @@ app.get("/", function (req, res) {
   });
 });
 
+// Login
+app.get("/login", function (req, res) {
+  res.render("login", {
+    title: "Bienvenido",
+    description: "Gracias por visitar esta página",
+  });
+});
+
 app.get("/about", function (req, res) {
   res.render("home", {
     title: "Acerca de",
