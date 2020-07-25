@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 <script>
-
+    login()
     async function login() {
         const { value: email } = await Swal.fire({
             title: 'Input email address',
@@ -21,8 +21,5 @@
             allowOutsideClick: false
         })
 
-        if (email && pass) {
-            Swal.fire(`Entered email: ${email} - Password: ${pass}`)
-        }
     }
 </script>

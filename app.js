@@ -30,6 +30,7 @@ app.get("/", function (req, res) {
 
 // Login
 app.get("/login", function (req, res) {
+  console.log("req", req.body);
   res.render("login", {
     title: "Bienvenido",
     description: "Gracias por visitar esta página",
