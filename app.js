@@ -37,7 +37,7 @@ app.get("/login", function (req, res) {
   });
 });
 
-app.get("/about", function (req, res) {
+app.get("/home", function (req, res) {
   res.render("home", {
     title: "Acerca de",
     description: "Somos expertos en aprender",
@@ -68,6 +68,11 @@ app.post("/save", function (req, res) {
     title: "Usuario: " + req.body.firstName + " " + req.body.lastName,
     description: "Se ha guardado correctamente el usuario",
   });
+});
+
+//The 404 Route (ALWAYS Keep this as the last route)
+app.use(function (req, res, next) {
+  res.status(404).send("404 Page not found!");
 });
 
 app.listen(3000, function () {
